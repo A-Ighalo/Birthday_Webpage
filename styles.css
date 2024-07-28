@@ -1,0 +1,232 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fce4ec;
+    color: #880e4f;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8bbd0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.celebrate-button {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #d81b60;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.celebrate-button:hover {
+    background-color: #ad1457;
+}
+
+.praises, .wonderful-things {
+    background-color: #f8bbd0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.praises h2, .wonderful-things h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.praises p, .wonderful-things p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.side-design {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background-color: #f8bbd0;
+    background-image: url('birthday-sides.png'); /* Add a birthday-themed image for a celebratory look */
+    background-size: cover;
+    background-repeat: repeat-y;
+    z-index: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .photo-gallery img {
+        width: 30%;
+        margin: 10px;
+    }
+
+    .praises h2, .wonderful-things h2 {
+        font-size: 2.5em;
+    }
+
+    .praises p, .wonderful-things p {
+        font-size: 1.2em;
+    }
+
+    .side-design {
+        width: 100px;
+    }
+}
+
+@media (max-width: 599px) {
+    .side-design {
+        display: none;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .photo-gallery img {
+        width: 45%;
+        margin: 5px;
+    }
+
+    .praises h2, .wonderful-things h2 {
+        font-size: 2em;
+    }
+
+    .praises p, .wonderful-things p {
+        font-size: 1em;
+    }
+
+    .celebrate-button {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #f8bbd0;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    position: relative;
+    animation: animatezoom 0.6s; /* Zoom in animation */
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.celebration-message {
+    font-size: 2em;
+}
+
+.celebration-message::after {
+    content: " 🎉🎂🎈";
+}

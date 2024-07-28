@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrate Uche</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="side-design left"></div>
+    <div class="side-design right"></div>
+    <div class="container">
+        <header>
+            <h1>Celebrate Uche</h1>
+        </header>
+        <main>
+            <div class="photo-gallery">
+                <img src="images/uche1.jpeg" alt="Uche Photo 1">
+                <img src="images/uche2.jpeg" alt="Uche Photo 2">
+                <img src="images/uche3.jpeg" alt="Uche Photo 3">
+              
+
+            </div>
+            <button class="celebrate-button" onclick="openModal()">What's Here</button>
+            <section class="wonderful-things">
+                <h2>Wonderful Things I Like About Uche</h2>
+                <p>Her Smile</p>
+                <p>Her Dressing</p>
+                <p>Her Sense of Humour</p>
+            </section>
+            <section class="praises">
+                <h2>Lovely Things About Uche</h2>
+                <p>Uche, you are truly an Ada di ora nma! Your beauty radiates like the morning sun.</p>
+                <p>You are a woman of substance, an Ezigbo nwanyi! Your kindness touches everyone around you.</p>
+                <p>Uche, you are a jewel, a real Nwa oma. Your intelligence and grace are unmatched.</p>
+                <p>May you continue to shine like the star you are, Uche. You are our Obioma, the one with a good heart.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- The Modal -->
+    <div id="celebrateModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="celebration-message">Happy Birthday Uche</div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("celebrateModal").style.display = "block";
+        }
+
+        function closeModal(event) {
+            if (event.target === event.currentTarget || event.target.className === "close") {
+                document.getElementById("celebrateModal").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
